@@ -40,3 +40,11 @@ debug: true
 # imagePullSecretNames is a list of secret names to use for pulling controller images.
 # More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
 imagePullSecretNames: []
+
+resources: 
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi

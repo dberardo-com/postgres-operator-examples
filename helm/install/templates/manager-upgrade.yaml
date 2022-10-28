@@ -22,6 +22,10 @@ spec:
       containers:
       - name: operator
         image: {{ required ".Values.controllerImages.upgrade is required" .Values.controllerImages.upgrade | quote }}
+        {{- if .Values.resources  }}
+        resources: 
+            {{ .Values.resources | nindent 6 }}
+        {{- end }}
         env:
         - name: CRUNCHY_DEBUG
           value: {{ .Values.debug | ne false | quote }}
