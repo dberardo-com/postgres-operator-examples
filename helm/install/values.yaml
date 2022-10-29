@@ -41,6 +41,7 @@ debug: true
 # More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
 imagePullSecretNames: []
 
+resources: {}
 #resources: 
 #  limits:
 #    cpu: 500m
