@@ -24,7 +24,7 @@ spec:
         image: {{ required ".Values.controllerImages.cluster is required" .Values.controllerImages.cluster | quote }}
         {{- if .Values.resources  }}
         resources: 
-            {{ .Values.resources | nindent 6 }}
+            {{ .Values.resources }}
         {{- end }}
         env:
         - name: CRUNCHY_DEBUG
